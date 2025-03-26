@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #f8f9fa;
 }
-
 /* Header */
 .header {
     background-color: #003366;
@@ -19,41 +18,63 @@ body {
     z-index: 1000;
 }
 
-.header h1 {
+/* Logo (Left Side) */
+.logo {
     color: white;
     font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navigation Menu (Aligned to Top Right) */
+.nav {
+    margin-left: auto;
 }
 
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
+    gap: 20px;
+    padding: 15px;
+    margin: 10px;
+    position: absolute;
+    top: 15px;  /* Aligns menu near the top */
+    right: 20px; /* Aligns menu to the right */
+}
+
+.nav ul li {
+    position: relative;
+
 }
 
 .nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s;
 }
 
 .nav ul li a:hover {
     color: #ffcc00;
 }
 
-/* Dropdown Menu */
+/* Initially hide the dropdown menu */
 .dropdown-hidden {
     display: none;
     position: absolute;
     background: #003366;
+    top: 30px;
+    right: 0;
     padding: 10px;
+    width: 150px;
+    border-radius: 5px;
 }
 
-.dropdown:hover .dropdown-hidden {
+/* Show dropdown when the 'active' class is added */
+.dropdown-visible {
     display: block;
 }
-
 /* Responsive Nav */
 .menu-toggle {
     display: none;
@@ -71,7 +92,10 @@ body {
         background: #003366;
         position: absolute;
         top: 50px;
-        width: 100%;
+        right: 10px;
+        width: 200px;
+        text-align: right;
+        padding: 10px;
     }
 
     .menu-toggle {
