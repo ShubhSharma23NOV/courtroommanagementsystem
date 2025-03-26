@@ -3,144 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>District & Session's Court</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function toggleDropdown() {
-            var dropdownMenu = document.getElementById("dropdown-menu");
-            if (dropdownMenu.style.display === "block") {
-                dropdownMenu.style.display = "none";
-            } else {
-                dropdownMenu.style.display = "block";
-            }
-        }
-
-        document.addEventListener("click", function(event) {
-            var dropdown = document.getElementById("dropdown");
-            var dropdownMenu = document.getElementById("dropdown-menu");
-            if (!dropdown.contains(event.target)) {
-                dropdownMenu.style.display = "none";
-            }
-        });
-    </script>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-
-        .header {
-            background-color: #003366;
-            padding: 15px 0;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
-        }
-
-        .logo-title {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo {
-            height: 50px;
-            margin-right: 10px;
-        }
-
-        .logo-title h1 {
-            color: white;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .nav ul {
-            list-style: none;
-            display: flex;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav ul li {
-            margin: 0 15px;
-            position: relative;
-        }
-
-        .nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav ul li a:hover {
-            color: #ffcc00;
-        }
-
-       .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgb(65, 63, 63);
-    box-shadow: 0px 4px 6px rgba(43, 40, 40, 0.1);
-    padding: 10px 0;
-    width: 150px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-        .dropdown-menu li {
-            padding: 5px 15px;
-        }
-
-        .dropdown-menu li a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: black;
-            transition: background 0.3s;
-        }
-
-        .dropdown-menu li a:hover {
-            background-color: blue;
-            color: black;
-        }
-
-        .language-switcher {
-            background: #ffcc00;
-            color: black;
-            border: none;
-            padding: 8px 12px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .language-switcher:hover {
-            background: #e6b800;
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="./design.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="logo-title">
-                <img src="logo.png" alt="Logo" class="logo">
+                <img src="emblem.png" alt="Logo" class="logo">
                 <h1>District & Session's Court</h1>
             </div>
             <nav class="nav">
@@ -161,6 +31,15 @@
             <button class="language-switcher">EN</button>
         </div>
     </header>
-    <div style="height: 80px;"></div>
+
+    <div class="half">
+        <div class="image">
+            <h2>hi</h2>
+        </div>
+
+        <div class="trending_news"></div>
+
+    </div>
 </body>
+<script src="./script.js"></script>
 </html>
