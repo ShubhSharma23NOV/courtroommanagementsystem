@@ -92,6 +92,7 @@ body {
 .dropdown-menu li a:hover {
     background-color: rgb(43, 43, 156);
     color: black;
+    border-radius: 10px;
 }
 
 .language-switcher {
@@ -107,4 +108,21 @@ body {
 
 .language-switcher:hover {
     background: #e6b800;
+}
+
+.half{
+    display: flex;
+}
+
+.image {
+    width: 70%;
+    height: 60vh;
+    object-fit: cover;
+    background-color: teal;
+}
+
+.trending_news {
+    width: 30%;
+    padding: 20px;
+    background-color: grey;
 }
