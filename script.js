@@ -36,3 +36,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         document.getElementById('form-message').innerText = "⚠️ Please fill all fields.";
     }
 });
+
+function toggleDropdown() {
+    var dropdownMenu = document.getElementById("dropdown-menu");
+    
+    // Toggle class to show/hide menu
+    if (dropdownMenu.classList.contains("dropdown-visible")) {
+        dropdownMenu.classList.remove("dropdown-visible");
+    } else {
+        dropdownMenu.classList.add("dropdown-visible");
+    }
+}
