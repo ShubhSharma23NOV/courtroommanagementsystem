@@ -3,43 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./design.css">
+    <title>Digital Courtroom Management System</title>
+    <link rel="stylesheet" href="design.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header class="header">
         <div class="container">
-            <div class="logo-title">
-                <img src="emblem.png" alt="Logo" class="logo">
-                <h1>District & Session's Court</h1>
-            </div>
+            <h1>Digital Courtroom Management System</h1>
             <nav class="nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li id="dropdown" class="dropdown">
-                        <a onclick="toggleDropdown()">About ▼</a>
-                        <ul id="dropdown-menu" class="dropdown-menu">
-                            <li><a href="#">History</a></li>
-                            <li><a href="#">Judges</a></li>
+                <ul id="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" onclick="toggleDropdown()">Features ▼</a>
+                        <ul id="dropdown-menu" class="dropdown-hidden">
+                            <li><a href="#feature1">Case Scheduling</a></li>
+                            <li><a href="#feature2">Digital Evidence</a></li>
+                            <li><a href="#feature3">Live Hearings</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Notices</a></li>
-                    <li><a href="#">Documents</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             </nav>
-            <button class="language-switcher">EN</button>
         </div>
     </header>
 
-    <div class="half">
-        <div class="image">
-            <h2>hi</h2>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Transforming Indian Courts with Speed & Efficiency</h2>
+            <p>Real-time case tracking, digital evidence management, and automated legal processes.</p>
+            <a href="#features" class="btn">Explore Features</a>
         </div>
+    </section>
 
-        <div class="trending_news"></div>
+    <!-- Case Status Section (Dynamic Updates) -->
+    <section id="case-status" class="case-status">
+        <h2>📌 Live Case Status Updates</h2>
+        <p id="status-text">Fetching latest case updates...</p>
+    </section>
 
-    </div>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Key Features</h2>
+        <div class="feature-container">
+            <div class="feature" id="feature1">
+                <h3>📅 Real-Time Case Scheduling</h3>
+                <p>Automated scheduling for judges and lawyers with live updates.</p>
+            </div>
+            <div class="feature" id="feature2">
+                <h3>🔒 Secure Digital Evidence</h3>
+                <p>Encrypted document submission with controlled access.</p>
+            </div>
+            <div class="feature" id="feature3">
+                <h3>🎙 Live Court Hearings</h3>
+                <p>Virtual hearings with AI-based transcription & digital notes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>For more details or collaboration, reach out to us.</p>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="form-message"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Digital Courtroom Management System. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-<script src="./script.js"></script>
 </html>
