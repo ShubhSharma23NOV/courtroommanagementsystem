@@ -1,128 +1,144 @@
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
 }
 
+/* Header */
 .header {
     background-color: #003366;
-    padding: 15px 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-.logo-title {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.logo-title h1 {
+.header h1 {
     color: white;
     font-size: 22px;
-    font-weight: bold;
 }
 
 .nav ul {
     list-style: none;
     display: flex;
+    gap: 15px;
     padding: 0;
     margin: 0;
-}
-
-.nav ul li {
-    margin: 0 15px;
-    position: relative;
 }
 
 .nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s;
 }
 
 .nav ul li a:hover {
     color: #ffcc00;
 }
 
-.dropdown-menu {
+/* Dropdown Menu */
+.dropdown-hidden {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgb(65, 63, 63);
-    box-shadow: 0px 4px 6px rgba(43, 40, 40, 0.1);
-    padding: 10px 0;
-    width: 150px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.dropdown-menu li {
-    padding: 5px 15px;
-}
-
-.dropdown-menu li a {
-    display: block;
+    background: #003366;
     padding: 10px;
-    text-decoration: none;
-    color: black;
-    transition: background 0.3s;
 }
 
-.dropdown-menu li a:hover {
-    background-color: rgb(43, 43, 156);
-    color: black;
-    border-radius: 10px;
+.dropdown:hover .dropdown-hidden {
+    display: block;
 }
 
-.language-switcher {
-    background: #ffcc00;
-    color: black;
+/* Responsive Nav */
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    font-size: 24px;
     border: none;
-    padding: 8px 12px;
     cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
 }
 
-.language-switcher:hover {
-    background: #e6b800;
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background: #003366;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav ul.open {
+        display: flex;
+    }
 }
 
-.half{
+/* Hero Section */
+.hero {
+    height: 80vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('courtroom.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
 }
 
-.image {
-    width: 70%;
-    height: 60vh;
-    object-fit: cover;
-    background-color: teal;
-}
-
-.trending_news {
-    width: 30%;
+/* Case Status */
+.case-status {
+    text-align: center;
     padding: 20px;
-    background-color: grey;
+    background: #ffcc00;
+    font-size: 20px;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px;
+}
+
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Contact Form */
+.contact {
+    text-align: center;
+    background: #003366;
+    color: white;
+    padding: 40px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #ffcc00;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
