@@ -1,15 +1,18 @@
-/* CSS (styles.css) */
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f9fa;
 }
 
 .header {
-    background-color: white;
+    background-color: #003366;
+    padding: 15px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .container {
@@ -31,6 +34,12 @@ body {
     margin-right: 10px;
 }
 
+.logo-title h1 {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
 .nav ul {
     list-style: none;
     display: flex;
@@ -45,8 +54,14 @@ body {
 
 .nav ul li a {
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #ffcc00;
 }
 
 .dropdown-menu {
@@ -54,24 +69,42 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgb(65, 63, 63);
+    box-shadow: 0px 4px 6px rgba(43, 40, 40, 0.1);
     padding: 10px 0;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
+    width: 150px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .dropdown-menu li {
     padding: 5px 15px;
 }
 
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgb(43, 43, 156);
+    color: black;
+}
+
 .language-switcher {
-    background: gray;
-    color: white;
+    background: #ffcc00;
+    color: black;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 12px;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.language-switcher:hover {
+    background: #e6b800;
 }
